@@ -1,0 +1,101 @@
+ul {
+  list-style: none;
+}
+
+ul > li:hover {
+  background-color: #f5f5f5;
+}
+
+.form-inline .form-control {
+  width: 50%;
+  margin-left: 80px;
+}
+
+.close {
+  width: 32px;
+  height: 32px;
+  opacity: 0.3;
+  position: absolute;
+  right: 10px;
+  top: 30%;
+  cursor: pointer;
+}
+.close:hover {
+  opacity: 1;
+}
+.close:before,
+.close:after {
+  position: absolute;
+  left: 15px;
+  content: " ";
+  height: 20px;
+  width: 2px;
+  background-color: #333;
+}
+.close:before {
+  transform: rotate(45deg);
+}
+.close:after {
+  transform: rotate(-45deg);
+}
+.date {
+  position: absolute;
+  color: gray;
+  right: 3%;
+  top: 26%;
+}
+
+.undone {
+  color: #61dafb;
+}
+
+.icon {
+  margin: 6px 10px 6px 0;
+}
+
+.list-group-item {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  color: #212529;
+  text-decoration: none;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.list-group {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+  margin-bottom: 0;
+  border-radius: 0.25rem;
+  max-height: 40vh;
+  overflow: auto;
+}
+
+.search__header {
+  display: flex;
+  justify-content: space-between;
+}
+.filter__delete-history {
+  color: white;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.history__label {
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 1200px) {
+  .date {
+    right: 5%;
+  }
+}
+
+@media (max-width: 728px) {
+  .date {
+    right: 15%;
+  }
+}
