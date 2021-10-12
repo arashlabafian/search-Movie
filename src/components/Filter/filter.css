@@ -1,0 +1,77 @@
+.filter {
+  position: relative;
+}
+
+.SearchBar {
+  width: 100%;
+  border: 1px solid grey;
+  box-shadow: -4px 7px 20px 0px rgba(0, 0, 0, 0.54);
+  background-color: white;
+  color: black;
+  position: absolute;
+  top: 4.6rem;
+  z-index: 200;
+}
+
+.SearchBar input {
+  width: 100%;
+  border: none;
+  padding: 10px 5px;
+  outline: none;
+}
+
+.SearchBar ul {
+  list-style-type: none;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+
+.SearchBar li::before {
+  content: "";
+}
+
+.SearchBar li {
+  padding: 10px 5px;
+  cursor: pointer;
+}
+
+.SearchBar li:hover {
+  background-color: grey;
+}
+
+.container-filter {
+  background: #18191c;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+  margin: 1%;
+  padding: 2rem;
+  text-align: left;
+  width: 98%;
+  margin: 2rem auto;
+}
+
+.filter__input {
+  background: #fff;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+  color: rgba(0, 0, 0, 0.5);
+  -moz-appearance: none;
+  appearance: none;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  font-weight: 400;
+  padding: 0.75rem 1em 0.75rem 1rem;
+  outline: none;
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .container-filter {
+    position: relative;
+    width: 100%;
+    padding: 1.25rem;
+  }
+}
