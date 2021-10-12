@@ -22,7 +22,6 @@ export default function Filter(props) {
   };
 
   useEffect(() => {
-    console.log(debouncedSearchTerm);
     if (debouncedSearchTerm) {
       setFilterStateCallback(debouncedSearchTerm);
       setHistory((prevVal) => [
