@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import History from "../History/History";
 import useDebounce from "../../hooks/useDebounce";
 import { v4 as uuidv4 } from "uuid";
@@ -10,6 +10,7 @@ export default function Filter(props) {
   const [history, setHistory] = useState([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
   const debouncedSearchTerm = useDebounce(query, 500);
+  const inputRef = useRef();
 
   const deleteHistory = (id) => {
     setHistory((prevVal) => {
@@ -35,6 +36,7 @@ export default function Filter(props) {
 
   useEffect(() => {
     document.addEventListener("click", handleOutsideClick, false);
+    inputRef.current.focus();
     return () => {
       document.removeEventListener("click", handleOutsideClick, false);
     };
@@ -108,6 +110,8 @@ export default function Filter(props) {
           placeholder={"i.e. Batman"}
           type="text"
           title="Find your Movie"
+          aria-label="Find your Movie"
+          ref={inputRef}
         />
         {renderSuggestions()}
         {!!history.length && (
