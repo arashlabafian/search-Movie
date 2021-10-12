@@ -11,7 +11,7 @@ export default function MoviesList({ movies }) {
   const splitText = (title, maxLength) => title.slice(0, maxLength);
 
   return (
-    <div className="container-movies">
+    <article className="container-movies">
       {movies.map((movie) => (
         <div className="movie__card" key={movie.id}>
           <div
@@ -37,6 +37,6 @@ export default function MoviesList({ movies }) {
           </div>
         </div>
       ))}
-    </div>
+    </article>
   );
 }
